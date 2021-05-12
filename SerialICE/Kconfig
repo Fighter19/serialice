@@ -45,6 +45,10 @@ config BOARD_ASROCK_939A785GMH
 
 config BOARD_ASROCK_P4I65GV
 	bool "ASRock P4i65GV"
+	
+config BOARD_ASROCK_P4V88
+	bool "ASRock P4V88"
+	select VIA_ROMSTRAP
 
 config BOARD_ASUS_F2A85_M
 	bool "ASUS F2A85-M"
@@ -171,6 +175,7 @@ config BOARD_INIT
 	default "hp_dl165_g6.c" if BOARD_HP_DL165_G6
 	default "wyse_s50.c" if BOARD_WYSE_S50
 	default "asrock_p4i65gv.c" if BOARD_ASROCK_P4I65GV
+    default "asrock_p4v88.c" if BOARD_ASROCK_P4V88
 	default "asus_p4p800-vm.c" if BOARD_ASUS_P4P800_VM
 	default "aopen_dxpl-plus.c" if BOARD_AOPEN_DXPL_PLUS
 	default "via_epia_m850.c" if BOARD_VIA_EPIA_M850
